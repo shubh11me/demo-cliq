@@ -1,0 +1,18 @@
+<label for="" class="form-label">Add Subjects</label>
+<input type="text" name="input" placeholder="Add Name"  class="form-control" [(ngModel)]="subj">
+<button class="btn btn-danger" (click)="addSub()">Add subject</button>
+<table class="table">
+    <thead>
+        <tr>
+            <!-- <th>No.</th> -->
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let name of nameList">{{name}}</tr>
+    </tbody>
+</table>
+
+
+<!-- <h2>List of subject</h2>
+<p *ngFor="let sub of subject">{{sub}}</p> -->

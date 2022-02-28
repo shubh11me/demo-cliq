@@ -1,0 +1,15 @@
+
+<label for="" class="form-label">Add Name</label>
+<input type="text" name="input" placeholder="Add Name"  class="form-control" [(ngModel)]="input">
+<button class="btn btn-primary" (click)="add()">Add</button>
+<div *ngIf="show">
+    <p *ngFor="let n of names">{{n}}</p>
+
+</div>
+<h3>Subject list in parent</h3>
+<p *ngFor="let n of subjectList">{{n}}</p>
+<p style="color:red" *ngIf="subjectList.length==0">No subjects</p>
+<button class="btn btn-warning" (click)="show=!show">Toggle list</button>
+
+<app-list-table (subList)="getItem($event)" [nameList]="names"></app-list-table>
+
